@@ -1,0 +1,31 @@
+body {
+    font-family: $body-font;
+    background-color: $body-background;
+    color: $body-color;
+    font-size: 100%;
+}
+
+a {
+    color: $primary;
+    text-decoration: none;
+    &:hover {
+        color: $secondary;
+    }
+}
+
+strong {
+    font-weight: 500;
+}
+
+header {
+    background-color: $header-background;
+    color: $header-color;
+    padding: $standard-padding;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+main {
+    padding: $standard-padding;
+    font-size: 1.2rem;
+}

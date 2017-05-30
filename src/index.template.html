@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ES6 Webpack Demo</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+        <% for (var chunk of webpack.chunks) {
+            for (var file of chunk.files) {
+                if (file.match(/\.(js|css)$/)) { %>
+                    <link rel="<%= chunk.initial?'preload':'prefetch' %>" href="<%= htmlWebpackPlugin.files.publicPath + file %>" as="<%= file.match(/\.css$/)?'style':'script' %>">
+                <% }
+            }
+        } %>
+    </head>
+    <body>
+        <header>
+            <h1>ES6 Webpack Demo</h1>
+        </header>
+        <main>
+            <div><strong>Today's date is</strong>: <span id="date"></span></div>
+            <br>
+            <div><strong>The current time is</strong>: <span id="time"></span></div>
+            <br>
+            <a href="#!" id="time-toggle">Stop Time</a>
+        </main>
+    </body>
+</html>

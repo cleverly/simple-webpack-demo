@@ -1,0 +1,25 @@
+{
+  "name": "es6-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "rimraf dist && webpack --watch",
+    "prod": "rimraf dist && cross-env NODE_ENV=production webpack"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "buble-loader": "^0.4.1",
+    "cross-env": "^5.0.0",
+    "css-loader": "^0.28.2",
+    "extract-text-webpack-plugin": "^2.1.0",
+    "html-webpack-plugin": "^2.28.0",
+    "jquery": "^3.2.1",
+    "moment": "^2.18.1",
+    "node-sass": "^4.5.3",
+    "raf": "^3.3.2",
+    "rimraf": "^2.6.1",
+    "sass-loader": "^6.0.5",
+    "webpack": "^2.6.0",
+    "webpack-bundle-analyzer": "^2.8.2"
+  }
+}
