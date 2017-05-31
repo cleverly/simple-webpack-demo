@@ -34,7 +34,10 @@ export default class Demo {
         this.$timeToggle.text('Start Time')
         this.timeRunning = false
     }
-    toggleTime() {
+    toggleTime(e) {
+        if (e) {
+            e.preventDefault()
+        }
         this.timeRunning ? this.stopTime() : this.startTime()
     }
 }
